@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main id="app">
+    <section id="lookup" class="card">
+      <label class="field">
+        <input id="phoneInput" inputmode="numeric" pattern="\d{10}" maxlength="10" placeholder="Teléfono (10 dígitos)" />
+      </label>
+      <div class="row">
+        <button id="findBtn" class="btn primary">Buscar</button>
+        <button id="clearBtn" class="btn">Limpiar</button>
+      </div>
+    </section>
+
+    <section id="result" class="card hidden">
+      <div id="personInfo" class="info"></div>
+      <div class="row">
+        <button id="markAttBtn" class="btn primary">Marcar asistencia</button>
+        <button id="editBtn" class="btn">Editar</button>
+      </div>
+    </section>
+
+    <section id="register" class="card hidden">
+      <label class="field"><input id="firstName" placeholder="Nombre" /></label>
+      <label class="field"><input id="lastName" placeholder="Apellido" /></label>
+      <label class="field"><input id="phoneReg" inputmode="numeric" maxlength="10" placeholder="Teléfono (10 dígitos)" /></label>
+      <label class="field"><input id="role" placeholder="Rol (invitado / anfitrión / staff)" /></label>
+      <div class="row">
+        <button id="saveBtn" class="btn primary">Guardar</button>
+        <button id="cancelBtn" class="btn">Cancelar</button>
+      </div>
+    </section>
+
+    <section id="feedback" class="card hidden">
+      <div id="feedbackText"></div>
+      <div class="row">
+        <button id="okFeedback" class="btn primary">OK</button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
